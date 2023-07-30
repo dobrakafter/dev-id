@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"module": "ES6",
+		"target": "ES5",
+		"moduleResolution": "node",
+		"allowJs": true,
+		"checkJs": true,
+		"resolveJsonModule": true,
+		"declaration": true,
+		"baseUrl": ".",
+	},
+	"include": [
+		"src/**/*.ts"
+	],
+}

@@ -1,0 +1,36 @@
+{
+  "name": "dev-id",
+  "version": "1.0.0",
+  "author": "Vigih Dev <vigihdev@gmail.com>",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monatheoctocat/dev-id.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monatheoctocat/dev-id/issues"
+  },
+  "homepage": "https://github.com/monatheoctocat/dev-id",
+  "scripts": {
+    "grunt:dev": "cd bower && grunt dev:bower:bootstrap && grunt dev:jquery",
+    "test:server": "nodemon test-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-concat-css": "^0.3.2",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-run": "^0.8.1",
+    "grunt-shell": "^4.0.0",
+    "lodash": "^4.17.21",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
