@@ -33,6 +33,7 @@ module.exports = function (grunt) {
                     '../vendor/bower-asset/bootstrap/src/js/moment.js': ['node_modules/moment/moment.js', 'node_modules/moment/locale/id.js'],
                     '../vendor/bower-asset/bootstrap/src/js/popper.js': ['node_modules/popper.js/dist/umd/popper.js'],
                     '../vendor/bower-asset/bootstrap/src/js/infinite-scroll.js': ['node_modules/infinite-scroll/dist/infinite-scroll.pkgd.js'],
+                    '../vendor/bower-asset/bootstrap/src/js/handlebars.js': ['node_modules/handlebars/dist/handlebars.js'],
                 },
             },
         },
@@ -48,7 +49,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-run');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-
 
     grunt.registerTask('dev:jquery', 'jquery', function () {
         grunt.config.merge(jqueryConfig);

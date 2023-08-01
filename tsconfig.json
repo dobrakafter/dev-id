@@ -6,10 +6,14 @@
 		"allowJs": true,
 		"checkJs": true,
 		"resolveJsonModule": true,
+		"traceResolution": true,
 		"declaration": true,
 		"baseUrl": ".",
+		"typeRoots": [
+			"./@types/modules"
+		]
 	},
 	"include": [
-		"src/**/*.ts"
+		"src/**/*.ts",
 	],
 }

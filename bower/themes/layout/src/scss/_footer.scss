@@ -1,0 +1,63 @@
+@use "sass:math";
+
+#footer.footer{
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	max-width: $themes-max-width;
+	width: 100%;
+
+	ul.list-menu{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items:center;
+		@include BoxShadow(2);
+		background-color: $white;
+		border-top : 1px solid tint-color($black,90%);
+	
+		li.list-menu-item{
+			margin-right: $getter;
+			list-style: none;
+			a.link-item{
+				text-decoration: none;
+				display: flex;
+				flex-direction: column;
+				align-items:center;
+				justify-content: center;
+				padding : math.div($getter, 2);
+				height: 60px;
+	
+				@include hover{
+					.material-icons,
+					.link-label{
+						color: $secondary;
+					}
+					text-decoration: none;
+				}
+				.material-icons,
+				.link-label{
+					color: $dark;
+				}
+				.material-icons{
+					font-size : 1.8em;
+				}
+				.link-label{
+					font-family: $font-family-sourcesanspro;
+					padding:0;
+					margin: 0;
+					font-size: 1em;
+					font-weight: $font-weight-bold;
+				}
+			}
+
+			&.active{
+				.link-item{
+					.link-label,.material-icons{
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+}

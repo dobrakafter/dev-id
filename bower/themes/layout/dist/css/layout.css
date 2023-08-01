@@ -1,0 +1,178 @@
+html, body {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  overflow: hidden;
+}
+
+#wrapper, #header, #main, section, #footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  margin: auto;
+  max-width: 600px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+section.section-center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+}
+
+section.section {
+  margin-bottom: 100px;
+}
+
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#header {
+  height: 110px;
+  background-image: url("../images/top-bar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+#header .header-main {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 8px 16px;
+}
+#header .header-main .header-main-item .header-notification {
+  position: relative;
+}
+#header .header-main .header-main-item .header-notification .count-notif {
+  position: absolute;
+  top: 0px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background: #CC0000;
+  text-align: center;
+  font-size: 0.7em;
+  color: #fff;
+}
+#header .header-main .header-main-item .header-notification .material-icons {
+  color: #fff;
+  font-size: 32px;
+}
+#header .header-breadcrumb {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#header .header-breadcrumb .breadcrumb-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#header .header-breadcrumb .breadcrumb-group .breadcrumb-back .material-icons-outlined,
+#header .header-breadcrumb .breadcrumb-group .breadcrumb-title {
+  font-weight: 700;
+  color: #000;
+}
+#header .header-breadcrumb .breadcrumb-group .breadcrumb-back {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#header .header-breadcrumb .breadcrumb-group .breadcrumb-back a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#header .header-breadcrumb .breadcrumb-group .breadcrumb-back a .material-icons-outlined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#header .header-breadcrumb .breadcrumb-group .breadcrumb-title {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  max-width: 600px;
+  width: 100%;
+}
+#footer.footer ul.list-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-top: 1px solid #e6e6e6;
+}
+#footer.footer ul.list-menu li.list-menu-item {
+  margin-right: 16px;
+  list-style: none;
+}
+#footer.footer ul.list-menu li.list-menu-item a.link-item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  height: 60px;
+}
+#footer.footer ul.list-menu li.list-menu-item a.link-item:hover {
+  text-decoration: none;
+}
+#footer.footer ul.list-menu li.list-menu-item a.link-item:hover .material-icons,
+#footer.footer ul.list-menu li.list-menu-item a.link-item:hover .link-label {
+  color: #CC0000;
+}
+#footer.footer ul.list-menu li.list-menu-item a.link-item .material-icons,
+#footer.footer ul.list-menu li.list-menu-item a.link-item .link-label {
+  color: #343a40;
+}
+#footer.footer ul.list-menu li.list-menu-item a.link-item .material-icons {
+  font-size: 1.8em;
+}
+#footer.footer ul.list-menu li.list-menu-item a.link-item .link-label {
+  font-family: Source Sans Pro, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  font-weight: 700;
+}
+#footer.footer ul.list-menu li.list-menu-item.active .link-item .link-label, #footer.footer ul.list-menu li.list-menu-item.active .link-item .material-icons {
+  color: #FFBD00;
+}
+
+/*# sourceMappingURL=layout.css.map */

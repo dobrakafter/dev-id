@@ -1,3 +1,4 @@
+// @ts-nocheck
 const path = require("node:path");
 const util = require("lodash");
 
@@ -17,4 +18,3 @@ module.exports.jqueryConfig = {
         },
     }
 }
-

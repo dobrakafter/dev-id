@@ -1,5 +1,6 @@
 {
     "breadcrumbs.showFiles": true,
+    "editor.formatOnSave": true,
     "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
         "editor.formatOnSave": true,
@@ -9,5 +10,6 @@
         "editor.defaultFormatter": "vscode.typescript-language-features",
         "editor.formatOnSave": true
     },
-    "php.suggest.basic": false
+    "php.suggest.basic": false,
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
