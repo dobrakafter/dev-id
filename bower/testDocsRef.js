@@ -35,6 +35,7 @@ class MyTest {
             response.height
             user.email
         })
+
         this.$element.modal()
     }
 }

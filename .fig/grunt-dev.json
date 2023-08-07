@@ -1,0 +1,10 @@
+[
+    {
+        "name": "dev:bower:bootstrap",
+        "description": "Bootstrap Excute"
+    },
+    {
+        "name": "dev:jquery",
+        "description": "Jquery Excute"
+    }
+]

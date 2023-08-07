@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/monatheoctocat/dev-id",
   "scripts": {
-    "grunt:dev": "cd bower && grunt dev:bower:bootstrap && grunt dev:jquery",
+    "grunt:dev": "node ./scripts/grunt-dev.js",
     "test:server": "nodemon test-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
