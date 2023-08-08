@@ -1,24 +1,24 @@
 @use "sass:math";
 
-#header{
+#header {
 	height: 110px;
-	background-image: url('../images/top-bar.png');
-	background-repeat:no-repeat;
+	background-image: url("../images/top-bar.png");
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-repeat: no-repeat;
-	@include border-bottom-radius($getter);	
+	@include border-bottom-radius($getter);
 
-	.header-main{
-		display:flex;
-		position:relative;
+	.header-main {
+		display: flex;
+		position: relative;
 		justify-content: space-between;
 		align-items: center;
-		padding : $getter $getter 8px $getter;
+		padding: $getter $getter 8px $getter;
 
-		.header-main-item{
-			.header-notification{
-				position:relative;
-				.count-notif{
+		.header-main-item {
+			.header-notification {
+				position: relative;
+				.count-notif {
 					position: absolute;
 					top: 0px;
 					right: -2px;
@@ -27,31 +27,30 @@
 					border-radius: 50%;
 					background: $secondary;
 					text-align: center;
-					font-size: .7em;
+					font-size: 0.7em;
 					color: #fff;
 				}
-				.material-icons{
+				.material-icons {
 					color: $white;
 					font-size: 32px;
 				}
 			}
 		}
-
 	}
 
 	// .header-breadcrumb
-	.header-breadcrumb{
+	.header-breadcrumb {
 		@include block0();
-		.breadcrumb-group{
+		.breadcrumb-group {
 			display: flex;
 			align-items: center;
 			position: relative;
 			.breadcrumb-back .material-icons-outlined,
-			.breadcrumb-title{
+			.breadcrumb-title {
 				font-weight: 700;
 				color: #000;
 			}
-			.breadcrumb-back{
+			.breadcrumb-back {
 				width: 40px;
 				height: 40px;
 				position: absolute;
@@ -61,20 +60,19 @@
 				align-items: center;
 				border-radius: 50%;
 
-				a{
+				a {
 					@include centerFlex();
-					.material-icons-outlined{
+					.material-icons-outlined {
 						@include centerFlex();
 					}
 				}
 			}
-			.breadcrumb-title{
+			.breadcrumb-title {
 				flex: auto;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 			}
 		}
-
 	}
 }

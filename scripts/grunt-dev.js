@@ -8,7 +8,6 @@ function exist(path) {
     return fs.existsSync(path);
 }
 
-
 function gruntBower(task) {
     let directory = path.join(...[env.PWD, 'bower'])
     chdir(directory);
@@ -18,5 +17,6 @@ function gruntBower(task) {
 if (process?.argv?.[2] && /dev:/.test(process.argv[2])) {
     gruntBower(process.argv[2]);
 }
+
 
 // console.log(process.argv[2]);
