@@ -1,0 +1,15 @@
+name: push-dev-id
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Commit
+        run: |
+          git config --local user.name "dobrakafter"
+          git config --local user.email "dobrakafter@gmail.com"
+          git add .
+          git commit -m "[AUTO:BUILD] build main.js"
