@@ -12,7 +12,7 @@ jobs:
           git config --local user.name "dobrakafter"
           git config --local user.email "dobrakafter@gmail.com"
           git add .
-          git commit -m "[AUTO:BUILD] build main.js"
+          git commit -m "Oke Jo"
       - name: Push
         uses: ad-m/github-push-action@master
         with:
