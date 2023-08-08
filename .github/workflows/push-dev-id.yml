@@ -1,4 +1,4 @@
-name: push-dev-id
+name: push-dev-id DEV_ID
 
 on: [push]
 
@@ -6,16 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Commit
-        run: |
-          git config --local user.name "dobrakafter"
-          git config --local user.email "dobrakafter@gmail.com"
-          git add .
-          git commit -m "Oke Jo"
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: "master"
-          repository: "https://github.com/dobrakafter/dev-id.git"
+      - uses: actions/checkout@v2
+        env:
+          DEV_ID: true
