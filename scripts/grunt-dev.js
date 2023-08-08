@@ -8,6 +8,7 @@ function exist(path) {
     return fs.existsSync(path);
 }
 
+
 function gruntBower(task) {
     let directory = path.join(...[env.PWD, 'bower'])
     chdir(directory);
