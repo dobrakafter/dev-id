@@ -1,0 +1,28 @@
+{
+    "name": "thrubus/dev",
+    "license": "Mit",
+    "authors": [
+        {
+            "name": "Dobrak",
+            "email": "vigihdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload-dev": {
+        "psr-4": {
+            "PHPUnit\\": "../../../.composer/vendor/phpunit/phpunit/src"
+        }
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "scripts": {
+        "vendor-test": "php -S localhost:8888 vendor/test/test.php",
+        "BootstrapTest": "php ../../../.composer/vendor/bin/phpunit --colors=always --testdox --bootstrap tests/bootstrap.php tests/BootstrapTest.php"
+    },
+    "require-dev": {
+        "webmozart/glob": "4.7.x-dev",
+        "webmozart/path-util": "^2.3",
+        "spatie/regex": "dev-main"
+    }
+}
