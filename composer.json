@@ -8,21 +8,73 @@
         }
     ],
     "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "vendor/yiisoft/yii2",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "vendor/vigihdev/utils",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "vendor/vigihdev/moment",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
     "autoload-dev": {
         "psr-4": {
-            "PHPUnit\\": "../../../.composer/vendor/phpunit/phpunit/src"
+            "PHPUnit\\": "../../../.composer/vendor/phpunit/phpunit/src",
+            "vigihdev\\utils\\": "vendor/vigihdev/utils/src",
+            "vigihdev\\moment\\": "vendor/vigihdev/moment/src"
         }
     },
     "config": {
-        "process-timeout": 0
+        "process-timeout": 0,
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "composer/installers": true,
+            "oomphinc/composer-installers-extender": true
+        },
+        "platform": {
+            "php": "8.1"
+        }
     },
     "scripts": {
+        "phpUnit": "php ../../../.composer/vendor/bin/phpunit --colors=always --bootstrap vendor/autoload.php --testdox",
+        "tests-utils": "@phpUnit vendor/vigihdev/utils/tests/unit",
+        "tests-fs": "@phpUnit vendor/vigihdev/fs/tests/unit",
+        "tests-moments": "@phpUnit vendor/vigihdev/moment/tests",
+        "tests-moment": "@phpUnit vendor/fightbulc/moment/tests",
+        "server": "php -S localhost:8888 ./php-server.php",
         "vendor-test": "php -S localhost:8888 vendor/test/test.php",
+        "momentTest": "php ../../../.composer/vendor/bin/phpunit --colors=always --bootstrap vendor/autoload.php --testdox vendor/fightbulc/moment/tests",
         "BootstrapTest": "php ../../../.composer/vendor/bin/phpunit --colors=always --testdox --bootstrap tests/bootstrap.php tests/BootstrapTest.php"
     },
     "require-dev": {
+        "vigihdev/utils": "*",
+        "vigihdev/moment": "*",
         "webmozart/glob": "4.7.x-dev",
         "webmozart/path-util": "^2.3",
-        "spatie/regex": "dev-main"
+        "spatie/regex": "dev-main",
+        "composer/composer": "2.6.x-dev",
+        "fightbulc/moment": "dev-master",
+        "mpdf/mpdf": "dev-development",
+        "yiisoft/yii2-debug": "^2.1",
+        "yiisoft/yii2-gii": "^2.2"
+    },
+    "require": {
+        "yiisoft/yii2": "*",
+        "phpoffice/phpspreadsheet": "^1.28",
+        "yiisoft/yii2-symfonymailer": "3.0.x-dev"
     }
 }

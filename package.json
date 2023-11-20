@@ -5,15 +5,16 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/monatheoctocat/dev-id.git"
+    "url": "https://github.com/dev-id.git"
   },
   "keywords": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/monatheoctocat/dev-id/issues"
+    "url": "https://github.com/dev-id/issues"
   },
-  "homepage": "https://github.com/monatheoctocat/dev-id",
+  "homepage": "https://github.com/dev-id",
   "scripts": {
+    "clear:web": "rm -r web/assets/*",
     "grunt:dev": "node ./scripts/grunt-dev.js",
     "test:server": "nodemon test-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +22,7 @@
   "devDependencies": {
     "grunt": "^1.6.1",
     "grunt-concat-css": "^0.3.2",
+    "grunt-config-merge": "^1.2.0",
     "grunt-contrib-concat": "^2.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^5.0.0",

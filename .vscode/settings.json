@@ -11,5 +11,12 @@
         "editor.formatOnSave": true
     },
     "php.suggest.basic": false,
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "scss.scannerExclude": [
+        "**/.git",
+        "**/node_modules",
+        "**/web/*",
+        "vendor",
+        "**/bower_components"
+    ],
 }

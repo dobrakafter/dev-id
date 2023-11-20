@@ -4,4 +4,15 @@
 package-lock.json
 /node_modules
 /vendor/
+bower
 composer.lock
+yii2-app-basic
+app
+assets
+config
+controllers
+web
+widgets
+views
+models
+runtime
