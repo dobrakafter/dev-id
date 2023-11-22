@@ -56,6 +56,28 @@ module.exports = function (grunt) {
         }
     });
 
+    // task builds:jsThirdParty
+    grunt.task.registerTask('builds:jsThirdParty', ['js', 'watch'], function (taskName) {
+        require('./bower/builds/js-third-party/build.js')(grunt);
+        const command = grunt.option('command');
+        const jsThirdParty = grunt.config.get('builds.jsThirdParty');
+        if (_.isString(command) && _.isString(taskName) && _.isObject(bsComponent)) {
+            grunt.initConfig(jsThirdParty);
+            grunt.task.run(taskName)
+        }
+    });
+
+    // task builds:thirdPartyComponents
+    grunt.task.registerTask('builds:thirdPartyComponents', ['js', 'watch'], function (taskName) {
+        require('./bower/builds/third-party-components/build.js')(grunt);
+        const command = grunt.option('command');
+        const thirdPartyComponents = grunt.config.get('builds.thirdPartyComponents');
+        if (_.isString(command) && _.isString(taskName) && _.isObject(bsComponent)) {
+            grunt.initConfig(thirdPartyComponents);
+            grunt.task.run(taskName)
+        }
+    });
+
     // task assets:bootstrap
     grunt.task.registerTask('assets:bootstrap', ['concat_css', 'watch'], function (taskName) {
         require('./bower/assets/bootstrap/build.js')(grunt);
@@ -77,4 +99,17 @@ module.exports = function (grunt) {
             grunt.task.run(taskName)
         }
     });
+
+    // task assets:dev
+    grunt.task.registerTask('assets:dev', ['watch'], function (taskName) {
+        require('./bower/assets/dev/build.js')(grunt);
+        const command = grunt.option('command');
+        const jquery = grunt.config.get('assets.dev');
+        if (_.isString(command) && _.isString(taskName) && _.isObject(jquery)) {
+            grunt.initConfig(jquery);
+            grunt.task.run(taskName)
+        }
+    });
+
+
 };
