@@ -1,0 +1,13 @@
+#modal-fixed-bottom.modal.fade {
+    .modal-dialog {
+        transition: transform 0.3s ease-out;
+        @include transform-translate(0, 100%);
+    }
+    .modal-dialog {
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}

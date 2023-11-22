@@ -1,0 +1,6 @@
+
+@for $i from 1 through 24 {
+    .elevation-#{$i}{
+        filter: drop-shadow-elevation($i);
+    }
+}
